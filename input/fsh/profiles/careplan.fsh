@@ -50,9 +50,9 @@ Description: "An example COVID Care Plan"
 * status = #active
 * intent = #plan
 * description = "COVID-19 Omicron Response Case from CCCM, Patient - Carey Carrington, NHI Number - ZXP7823"
+* subject.identifier.use = #official
 * subject
   * identifier
-    * use = #official
     * system = "https://standards.digital.health.nz/ns/nhi-id"
     * value = "ZXP7823"
   * type = "Patient"
