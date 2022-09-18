@@ -2,11 +2,9 @@ Profile: CovidPlanDefinition
 Parent: PlanDefinition
 Description: "The Care in the Community profile of the PlanDefinition resource"
 * implicitRules 0..0
-* text 0..0
 * contained 0..0
 * extension 0..0
 * modifierExtension 0..0
-* contact 0..0
 * useContext 0..0
 * copyright 0..0
 * approvalDate 0..0

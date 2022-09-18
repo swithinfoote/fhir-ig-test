@@ -3,7 +3,6 @@ Parent: CarePlan
 Description: "The Care in the Community profile of the CarePlan resource"
 * implicitRules 0..0
 * language 0..0
-* text 0..0
 * extension 0..0
 * modifierExtension 0..0
 * identifier 0..0
@@ -43,16 +42,3 @@ Description: "The Care in the Community profile of the CarePlan resource"
 * author only Reference(Practitioner)
 * activity.detail.instantiatesCanonical only Canonical(Questionnaire)
 * activity.detail.scheduled[x] only Timing
-
-Instance: CarePlanExample
-InstanceOf: CovidCarePlan
-Description: "An example COVID Care Plan"
-* status = #active
-* intent = #plan
-* description = "COVID-19 Omicron Response Case from CCCM, Patient - Carey Carrington, NHI Number - ZXP7823"
-* subject.identifier.use = #official
-* subject
-  * identifier
-    * system = "https://standards.digital.health.nz/ns/nhi-id"
-    * value = "ZXP7823"
-  * type = "Patient"

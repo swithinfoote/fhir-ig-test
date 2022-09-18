@@ -3,7 +3,6 @@ Parent: Encounter
 Description: "The Care in the Community profile of the Encounter resource"
 * implicitRules 0..0
 * language 0..0
-* text 0..0
 * contained 0..0
 * extension 0..0
 * modifierExtension 0..0

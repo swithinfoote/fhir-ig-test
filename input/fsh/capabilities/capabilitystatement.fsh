@@ -19,7 +19,8 @@ Usage: #definition
 * rest.security.extension.url = "http://fhir-registry.smarthealthit.org/StructureDefinition/oauth-uris"
 * rest.security.extension.extension[0].url = "token"
 * rest.security.extension.extension[=].valueUri = "https://auth.integration.covid19.health.nz/oauth2/token"
-* rest.security.description = "Uses OAuth2 as a way to authentication & authorize users"
+* rest.security.extension.extension[+].url = "authorize"
+* rest.security.extension.extension[=].valueUri = "https://auth.integration.covid19.health.nz/oauth2/authorize"
 * rest.resource[0].type = #CarePlan
 * rest.resource[=].profile = Canonical(CovidCarePlan)
 * rest.resource[=].interaction[0].code = #create
