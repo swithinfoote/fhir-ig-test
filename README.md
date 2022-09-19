@@ -31,6 +31,20 @@ The FHIR team provides an IG publishing tool that takes the implementation guide
 
 The published IG content can be found in the `output` folder and can be viewed by opening `output/index.html` in a web browser.
 
+### Additional Content Generation
+
+Some of the Implementation Guide page content is also generated content - specifically the contents of `input/pagecontent/capabilityStatement.xml` and `input/pagecontent/profiles.xml`.  These files can be re-generated as required with the following commands once SUSHI pre-processing is complete:
+
+```bash
+# Install dependencies - there is currently no package.json for these scripts
+npm install remarkable
+npm install markdown
+
+# Generate content (these scripts have been copied and tweaked from the NHI IG Github repo)
+./localscripts/makeCapabilityStatement.js
+./localscripts/makeProfiles.js
+```
+
 ## FHIR IG Auto-Builder
 
 In addition to the IG Publisher, the FHIR team also provide a [FHIR IG Auto-Builder](https://github.com/FHIR/auto-ig-builder) that allows IGs in public GitHub repositories to be auto-published to the FHIR Continuous Integration build service at https://build.fhir.org.  The appropriate webhook configuration has been set up for this project's GitHub repository and the auto-published IG can be viewed at the following URL:
@@ -56,7 +70,3 @@ This pattern seems to be fairly common throughout the New Zealand FHIR Registry:
 
 - [NZ FHIR Implementation Guide Index](https://simplifier.net/guide/newzealandfhirimplementationguideindex?version=current) - All of the IGs referenced in the Simplifier index are external IGs that have been published using the FHIR IG Publisher.
 - [NZ FHIR Registry IGs](https://simplifier.net/organization/nz-fhir-registry/~guides) - This list of NZ FHIR Registry IGs that HAVE been authored in Simplifier shows that they are all experimental/draft in nature.
-
-## OpenAPI Specification
-
-It's worth noting that neither the FHIR IG Publisher nor Simplifier appear to generate an OpenAPI specification as part of their output, so we are likely to require a separate solution for creating and maintaining this.

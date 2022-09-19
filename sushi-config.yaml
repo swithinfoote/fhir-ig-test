@@ -4,17 +4,17 @@
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: fhir.ig.test
-canonical: http://example.org
+canonical: https://build.fhir.org/ig/richard-hunt-mwnz/fhir-ig-test
 name: FHIR_IG_TEST
-# title: Example Title
-# description: Example Implementation Guide for getting started with SUSHI
-status: draft # draft | active | retired | unknown
+title: Care In The Community COVID Care Plan API
+description: Care In The Community COVID Care Plan API
+status: draft
 version: 0.1.0
-fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
+fhirVersion: 4.0.1
 copyrightYear: 2022+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
-# jurisdiction: urn:iso:std:iso:3166#US "United States of America" # https://www.hl7.org/fhir/valueset-jurisdiction.html
+jurisdiction: urn:iso:std:iso:3166#NZ "New Zealand"
 publisher:
   name: Te Whatu Ora
   url: https://www.tewhatuora.govt.nz/
@@ -60,7 +60,9 @@ publisher:
 # partial list of allowed parameters see:
 # https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
 #
-# parameters:
+parameters:
+  show-inherited-invariants: false 
+
 #   excludettl: true
 #   validation: [allow-any-extensions, no-broken-links]
 #
@@ -74,7 +76,18 @@ publisher:
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home: index.html
-  Artifacts: artifacts.html
+  Business Context: businessContext.html
+  Use Cases: useCases.html
+  Profiles: profiles.html
+  API: capabilityStatement.html
+  Extensions: extensions.html
+  Terminology: terminology.html
+  Artifact Index: artifacts.html
+  Support:
+    FHIR Spec: new-tab http://hl7.org/fhir/R4/index.html
+    Download IG : full-ig.zip
+    Artifacts (Json): definitions.json.zip
+    Artifacts (Xml): definitions.xml.zip
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
