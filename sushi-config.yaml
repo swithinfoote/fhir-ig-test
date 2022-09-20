@@ -61,7 +61,8 @@ publisher:
 # https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
 #
 parameters:
-  show-inherited-invariants: false 
+  show-inherited-invariants: false
+  bundle-references-resolve: false
 
 #   excludettl: true
 #   validation: [allow-any-extensions, no-broken-links]
