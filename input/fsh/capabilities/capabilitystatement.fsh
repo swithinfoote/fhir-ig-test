@@ -267,4 +267,6 @@ Usage: #definition
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Logical id of this artifact"
+* rest.resource[=].operation[0].name = "apply"
+* rest.resource[=].operation[=].definition = "https://build.fhir.org/ig/richard-hunt-mwnz/fhir-ig-test/OperationDefinition/PlanDefinition-apply"
 * rest.interaction.code = #transaction
